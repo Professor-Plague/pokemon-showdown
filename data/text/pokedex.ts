@@ -104,6 +104,9 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	fearow: {
 		name: "Fearow",
 	},
+	shearow: {
+		name: "Shearow",
+	},
 	ekans: {
 		name: "Ekans",
 	},

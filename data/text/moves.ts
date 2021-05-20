@@ -1430,6 +1430,10 @@ export const MovesText: {[k: string]: MoveText} = {
 			desc: "The target is unaffected by this move unless it is asleep. The user recovers 1/2 the HP lost by the target, rounded down, but not less than 1 HP. If this move breaks the target's substitute, the user does not recover any HP.",
 		},
 	},
+	drilldance: {
+		name: "Drill Dance",
+		shortDesc: "Raises critical hit ratio and speed.",
+	},
 	drillpeck: {
 		name: "Drill Peck",
 		shortDesc: "No additional effect.",
