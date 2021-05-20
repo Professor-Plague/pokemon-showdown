@@ -1,6 +1,11 @@
 /* eslint-disable max-len */
 
 export const Learnsets: {[speciesid: string]: LearnsetData} = {
+	shearow: {
+		learnset: {
+			drilldance: ["8L1"],
+		},
+	},
 	missingno: {
 		learnset: {
 			blizzard: ["3L1"],
