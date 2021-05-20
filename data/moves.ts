@@ -3835,6 +3835,39 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Psychic",
 		contestType: "Clever",
 	},
+	drilldance: {
+		num: 827,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Drill Dance",
+		pp: 30,
+		priority: 0,
+		flags: {snatch: 1, dance: 1},
+		volatileStatus: 'focusenergy',
+		condition: {
+			onStart(target, source, effect) {
+				if (effect?.id === 'zpower') {
+					this.add('-start', target, 'move: Focus Energy', '[zeffect]');
+				} else if (effect && (['imposter', 'psychup', 'transform'].includes(effect.id))) {
+					this.add('-start', target, 'move: Focus Energy', '[silent]');
+				} else {
+					this.add('-start', target, 'move: Focus Energy');
+				}
+			},
+			onModifyCritRatio(critRatio) {
+				return critRatio + 2;
+			},
+		},
+		boosts: {
+			spe: 1,
+		},
+		secondary: null,
+		target: "self",
+		type: "Normal",
+		zMove: {boost: {accuracy: 1}},
+		contestType: "Cool",
+	},
 	drillpeck: {
 		num: 65,
 		accuracy: 100,
